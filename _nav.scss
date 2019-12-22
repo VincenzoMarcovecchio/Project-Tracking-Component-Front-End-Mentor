@@ -88,7 +88,7 @@ nav .menu-icon {
 nav .menu-icon .nav-icon {
   background: #333;
   display: block;
-  height: 3px;
+  height: 4px;
   width: 25px;
   position: relative;
   transition: background 0.2s ease-out;
@@ -100,7 +100,7 @@ nav .menu-icon .nav-icon:before {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 6px;
+  top: 8px;
   transition: all 0.2 ease-out;
 }
 nav .menu-icon .nav-icon:after {
@@ -110,7 +110,7 @@ nav .menu-icon .nav-icon:after {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: -6px;
+  top: -8px;
   transition: all 0.2 ease-out;
 }
 
