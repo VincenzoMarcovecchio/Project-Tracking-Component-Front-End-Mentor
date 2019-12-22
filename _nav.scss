@@ -1,0 +1,140 @@
+nav {
+  margin: 50px 9% 80px 10%;
+  font-family: "Barlow Condensed", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoint(small) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 40px auto 0;
+  }
+}
+
+.logo {
+  height: 25px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  overflow: hidden;
+  justify-content: flex-end;
+  z-index: 5;
+
+  @include breakpoint(small) {
+    max-height: 0;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    transition: all 0.2s ease-out;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 3px 3px 15px -5px rgba(173, 168, 173, 1);
+  }
+}
+
+nav ul :nth-child(4) {
+  list-style: disc;
+  padding-left: 35px;
+  margin-left: 35px;
+  color: $grayishblue;
+  @include breakpoint(small) {
+    list-style: none;
+    margin: 0;
+    padding: 20px 0 0 0;
+    border-top: 1px solid $grayishblue;
+    display: inline-block;
+  }
+}
+
+.login {
+  color: $grayishblue;
+}
+
+nav ul li {
+  margin-right: 35px;
+  @include breakpoint(small) {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+}
+
+nav ul a {
+  font-size: 17px;
+  text-decoration: none;
+  color: $verydarkblue;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+nav .menu-icon {
+  display: none;
+  @include breakpoint(small) {
+    display: block;
+    position: relative;
+    float: right;
+    cursor: pointer;
+  }
+}
+nav .menu-icon .nav-icon {
+  background: #333;
+  display: block;
+  height: 3px;
+  width: 25px;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+nav .menu-icon .nav-icon:before {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 6px;
+  transition: all 0.2 ease-out;
+}
+nav .menu-icon .nav-icon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -6px;
+  transition: all 0.2 ease-out;
+}
+
+.menu-btn {
+  display: none;
+}
+
+nav .menu-btn:checked ~ .menu {
+  max-height: 240px;
+  box-shadow: 3px 3px 15px -6px rgb(129, 127, 129);
+  padding: 25px 25px 20px 25px;
+  position: absolute;
+  top: 70px;
+  background-color: #fff;
+}
+
+nav .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+nav .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+nav .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
