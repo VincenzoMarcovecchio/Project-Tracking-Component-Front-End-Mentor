@@ -374,7 +374,7 @@ nav .menu-btn:checked ~ .menu-icon .nav-icon:after {
 
 @media screen and (max-width: 750px) {
   .left-section .container button {
-    padding: 11px 11px;
+    padding: 15px 20px;
     font-size: 0.7rem;
   }
 }
