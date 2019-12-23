@@ -112,7 +112,7 @@ nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 80vw;
+    width: 85vw;
     margin: 40px auto 0;
   }
 }
