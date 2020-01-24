@@ -137,9 +137,8 @@ nav {
 
 @media screen and (max-width: 750px) {
   .menu {
-    max-height: 0;
     width: 100%;
-    position: absolute;
+    position: absolute;   
     top: 50px;
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
@@ -167,7 +166,7 @@ nav ul :nth-child(4) {
   nav ul :nth-child(4) {
     list-style: none;
     margin: 0;
-    padding: 20px 0 0 0;
+    padding: 20px 0 20px 0;
     border-top: 1px solid #a0a1ac;
     display: inline-block;
   }
@@ -184,7 +183,7 @@ nav ul li {
 @media screen and (max-width: 750px) {
   nav ul li {
     margin-right: 0;
-    margin-bottom: 25px;
+    margin: 25px auto 25px auto;
   }
 }
 
@@ -194,6 +193,10 @@ nav ul a {
   color: #242942;
   font-weight: 700;
   text-transform: uppercase;
+  @media screen and (max-width: 750px) {
+      font-size: 17px;
+    display:block;
+  }
 }
 
 nav ul a:hover {
@@ -252,7 +255,7 @@ nav .menu-icon .nav-icon:after {
 }
 
 nav .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  min-height: 440px;
   -webkit-box-shadow: 3px 3px 15px -6px #817f81;
           box-shadow: 3px 3px 15px -6px #817f81;
   padding: 25px 25px 20px 25px;
