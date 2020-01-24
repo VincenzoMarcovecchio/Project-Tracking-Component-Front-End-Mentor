@@ -152,6 +152,7 @@ nav {
     text-align: center;
     -webkit-box-shadow: 3px 3px 15px -5px #ada8ad;
             box-shadow: 3px 3px 15px -5px #ada8ad;
+    max-height: 0;
   }
 }
 
@@ -193,10 +194,14 @@ nav ul a {
   color: #242942;
   font-weight: 700;
   text-transform: uppercase;
+  
+
+}
   @media screen and (max-width: 750px) {
-      font-size: 17px;
+    a {
+      font-size: 27px;
     display:block;
-  }
+    }
 }
 
 nav ul a:hover {
